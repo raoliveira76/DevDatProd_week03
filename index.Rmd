@@ -1,0 +1,26 @@
+---
+title       : R Markdown with Plotly
+subtitle    : 2016-10-25
+author      : Ronaldo A Oliveira
+job         : Developing Data Products by Coursera
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : standalone    # {standalone, draft, selfcontained}
+knit        : slidify::knit2slides
+---
+
+## Scatter Plot
+
+```{r plot1b, echo=FALSE, warning=FALSE, message=FALSE}
+library(plotly)
+plotly_POST(plot_ly(data = iris, x = ~Sepal.Length, y = ~Petal.Length, color = ~Species), 
+            filename = 'plot1')
+```
+
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~raoliveira76/12.embed"></iframe>
+
+# Sys.setenv("plotly_username"="raoliveira76")
+# Sys.setenv("plotly_api_key"="nhm4xl4tkm")
+
